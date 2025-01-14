@@ -1,8 +1,8 @@
 import { Toaster } from "react-hot-toast";
-import LoginModal from "../components/modals/LoginModal";
+// import LoginModal from "../components/modals/LoginModal";
 import Navbar from "../components/navbar/Navbar";
 import { Outlet} from "react-router";
-import RegisterModal from "../components/modals/RegisterModal";
+// import RegisterModal from "../components/modals/RegisterModal";
 import { useAppSelector } from "../store/store";
 import RentModal from "../components/modals/RentModal";
 import SearchModal from "../components/modals/SearchModal";
@@ -14,8 +14,8 @@ const TopbarLayout = () => {
     <>
       <header>       
         <Toaster />
-        <LoginModal />
-        <RegisterModal />
+        {/* <LoginModal /> */}
+        {/* <RegisterModal /> */}
         {currentUser && <RentModal />}
         <SearchModal />
         <Navbar />
