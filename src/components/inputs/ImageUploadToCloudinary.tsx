@@ -7,7 +7,7 @@ interface ImageUploadProps {
   value: string;
 }
 
-const ImageUpload: React.FC<ImageUploadProps> = ({ value, onChange }) => {
+const ImageUploadToCloudinary: React.FC<ImageUploadProps> = ({ value, onChange }) => {
   const cloudinaryRef = useRef();
   const widgetRef = useRef();
 
@@ -58,4 +58,4 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ value, onChange }) => {
   );
 };
 
-export default ImageUpload;
+export default ImageUploadToCloudinary;

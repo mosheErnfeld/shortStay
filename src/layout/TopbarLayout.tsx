@@ -9,7 +9,6 @@ import SearchModal from "../components/modals/SearchModal";
 
 const TopbarLayout = () => {
   const currentUser = useAppSelector(state => state.currentUser.user)
-//   console.log(currentUser, 'll')
   return (
     <>
       <header>       
