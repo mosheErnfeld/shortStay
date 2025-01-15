@@ -8,7 +8,7 @@ import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import CountrySelect from "../inputs/CountrySelect";
 import Map from "../Map";
 import Counter from "../inputs/Counter";
-import ImageUpload from "../inputs/ImageUpload";
+import ImageUploadToCloudinary from "../inputs/ImageUploadToCloudinary";
 import Input from "../inputs/Input";
 import toast from "react-hot-toast";
 // import { useAppSelector } from "../../store/store";
@@ -17,6 +17,7 @@ import { addListing } from "../../store/featured/listingSlice";
 import useFetch from "../../hooks/useFetch";
 import { useAuthCookies } from "../../hooks/useAuthCookies";
 import { CREATE_LISTING } from "../../constants/costants";
+import { addToMyListings } from "../../store/featured/myListingsSlice";
 // import { LocationStep } from "../test/components/steps/LocationStep";
 // import { LocationGoogle } from "../test/components/steps/LocationGoogle";
 
@@ -100,9 +101,6 @@ const RentModal = () => {
       return onNext();
     }
     data.user = userId;
-    console.log(data.location.value)
-    console.log(location)
-    // data.user = "0dda6fc4-092a-4921-9e80-06c2937d7218";
     data.locationValue = data.location.value
     fetchData({ url: CREATE_LISTING, method: "POST", data });
   };
@@ -110,6 +108,7 @@ const RentModal = () => {
   useEffect(() => {
     if (!res) return;
     dispatch(addListing(res));
+    dispatch(addToMyListings(res));
     toast.success("Listing Created");
     setStep(STEPS.CATEGORY);
     reset();
@@ -231,7 +230,7 @@ const RentModal = () => {
           title="Add a photo of your place"
           subtitle="Show guests what your place looks like!"
         />
-        <ImageUpload
+        <ImageUploadToCloudinary
           value={imageSrc}
           onChange={(value) => setCustomValue("imageSrc", value)}
         />

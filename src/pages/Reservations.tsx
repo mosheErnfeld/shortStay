@@ -57,6 +57,7 @@ const Reservations = () => {
       />
     );
   }
+  
   return (
     <ReservationClient
       reservations={reservations}
