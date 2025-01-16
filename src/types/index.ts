@@ -1,8 +1,3 @@
-export type EmptyStateType = {
-  title?: string;
-  subtitle?: string;
-  shoeReset?: boolean;
-};
 
 export type User = {
   id: string;

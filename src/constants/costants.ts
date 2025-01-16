@@ -17,3 +17,6 @@ export const CREATE_RESERVATION = "/api/reservation"
 export const DELETE_RESERVATION = "/api/reservation" 
 export const GET_ALL_RESERVATIONS_FOR_AUTHOR = "api/query/all_reservations_for_author"
 export const GET_ALL_RESERVATIONS_FOR_USER = "/api/query/all_reservations_for_user"
+
+export const SHOW_IMAGE_URL = "https://instaback.ai:4002/d47b5211-1ee0-4a00-a697-36aacd76bd22/assets/"
+export const IMAGE_UPLOAD_URL = "https://instaback.ai:4002/d47b5211-1ee0-4a00-a697-36aacd76bd22/assets/upload/"

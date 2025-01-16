@@ -1,3 +1,4 @@
+import { SHOW_IMAGE_URL } from "../../constants/costants";
 import useCountries from "../../hooks/useCountries";
 import Heading from "../Heading";
 import HeartButton from "../HeartButton";
@@ -25,7 +26,7 @@ const ListingHead: React.FC<ListingHeadProps> = ({
         subtitle={`${location?.region}, ${location?.label}`}
       />
       <div className="w-full h-[60vh] overflow-hidden rounded-xl relative">
-        <img src={imageSrc} alt="Image" className="object-cover w-full"/>
+        <img src={SHOW_IMAGE_URL + imageSrc} alt="Image" className="object-cover w-full"/>
         <div className="absolute top-5 right-5">
             <HeartButton 
                 listingId={id}
