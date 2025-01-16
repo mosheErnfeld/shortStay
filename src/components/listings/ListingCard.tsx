@@ -5,6 +5,7 @@ import { format } from "date-fns";
 import { useNavigate } from "react-router";
 import HeartButton from "../HeartButton";
 import Button from "../Button";
+import { SHOW_IMAGE_URL } from "../../constants/costants";
 
 interface ListingCardProps {
   data: Listing;
@@ -67,7 +68,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
       <div className="flex flex-col gap-2 w-full">
         <div className="w-full aspect-square relative overflow-hidden rounded-xl">
           <img
-            src={data.imageSrc}
+            src={SHOW_IMAGE_URL + data.imageSrc}
             alt="Listings"
             className="object-cover h-full w-full group-hover:scale-110 transition"
           />

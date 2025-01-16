@@ -22,7 +22,9 @@ export const MyListingSlice = createSlice({
     },
 
     deleteListing: (state, action: PayloadAction<string>) => {
-      state.listings = state.listings.filter(listing => listing.id !== action.payload);
+      state.listings = state.listings.filter(
+        (listing) => listing.id !== action.payload
+      );
     },
   },
 });

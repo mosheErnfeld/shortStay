@@ -8,7 +8,6 @@ import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import CountrySelect from "../inputs/CountrySelect";
 import Map from "../Map";
 import Counter from "../inputs/Counter";
-import ImageUploadToCloudinary from "../inputs/ImageUploadToCloudinary";
 import Input from "../inputs/Input";
 import toast from "react-hot-toast";
 // import { useAppSelector } from "../../store/store";
@@ -18,6 +17,7 @@ import useFetch from "../../hooks/useFetch";
 import { useAuthCookies } from "../../hooks/useAuthCookies";
 import { CREATE_LISTING } from "../../constants/costants";
 import { addToMyListings } from "../../store/featured/myListingsSlice";
+import ImageUpload from "../inputs/ImageUpload";
 // import { LocationStep } from "../test/components/steps/LocationStep";
 // import { LocationGoogle } from "../test/components/steps/LocationGoogle";
 
@@ -152,6 +152,8 @@ const RentModal = () => {
       </div>
     </div>
   );
+  
+
 
   if (step === STEPS.LOCATION) {
 
@@ -163,7 +165,6 @@ const RentModal = () => {
         />
         <CountrySelect
           value={location}
-          // onChange={(value) => console.log("location", value.value)}
           onChange={(value) => setCustomValue("location", value)}
         />
         <Map center={location?.latlng} />
@@ -230,7 +231,7 @@ const RentModal = () => {
           title="Add a photo of your place"
           subtitle="Show guests what your place looks like!"
         />
-        <ImageUploadToCloudinary
+        <ImageUpload
           value={imageSrc}
           onChange={(value) => setCustomValue("imageSrc", value)}
         />
