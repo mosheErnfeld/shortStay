@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import useRentModal from "../../hooks/useRentModal";
 import Modal from "./Modal";
 import Heading from "../Heading";
@@ -15,14 +15,14 @@ export interface LocationType {
 const GoogleMapModal = () => {
   const rentModal = useRentModal();
 
-  const [locationG, setLocationG] = useState<LocationType>({
-    address: "",
-    coordinates: { lat: 31.7889548, lng: 35.2031488 },
-  });
+  // const [locationG, setLocationG] = useState<LocationType>({
+  //   address: "",
+  //   coordinates: { lat: 31.7889548, lng: 35.2031488 },
+  // });
 
-  useEffect(() => {
-    console.log(locationG);
-  }, [locationG]);
+  // useEffect(() => {
+  //   console.log(locationG);
+  // }, [locationG]);
 
   const bodyContent = (
     <div className="flex flex-col gap-8">
