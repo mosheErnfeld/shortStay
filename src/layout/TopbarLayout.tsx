@@ -6,6 +6,7 @@ import RegisterModal from "../components/modals/RegisterModal";
 import { useAppSelector } from "../store/store";
 import RentModal from "../components/modals/RentModal";
 import SearchModal from "../components/modals/SearchModal";
+import GoogleMapModal from "../components/modals/GoogleMapModal";
 
 const TopbarLayout = () => {
   const currentUser = useAppSelector(state => state.currentUser.user)
@@ -15,8 +16,9 @@ const TopbarLayout = () => {
         <Toaster />
         <LoginModal />
         <RegisterModal />
-        {currentUser && <RentModal />}
+        {/* {currentUser && <RentModal />} */}
         <SearchModal />
+        <GoogleMapModal />
         <Navbar />
       </header>
       <main className="pb-20 pt-28">
