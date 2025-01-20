@@ -3,13 +3,13 @@ import LoginModal from "../components/modals/LoginModal";
 import Navbar from "../components/navbar/Navbar";
 import { Outlet} from "react-router";
 import RegisterModal from "../components/modals/RegisterModal";
-import { useAppSelector } from "../store/store";
-import RentModal from "../components/modals/RentModal";
+// import { useAppSelector } from "../store/store";
+// import RentModal from "../components/modals/RentModal";
 import SearchModal from "../components/modals/SearchModal";
 import GoogleMapModal from "../components/modals/GoogleMapModal";
 
 const TopbarLayout = () => {
-  const currentUser = useAppSelector(state => state.currentUser.user)
+  // const currentUser = useAppSelector(state => state.currentUser.user)
   return (
     <>
       <header>       
