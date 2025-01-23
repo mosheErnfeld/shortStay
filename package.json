@@ -12,6 +12,7 @@
   "dependencies": {
     "@cloudinary/react": "^1.13.1",
     "@cloudinary/url-gen": "^1.21.0",
+    "@googlemaps/markerwithlabel": "^2.0.28",
     "@react-google-maps/api": "^2.20.3",
     "@reduxjs/toolkit": "^2.5.0",
     "@types/google-maps": "^3.2.6",
