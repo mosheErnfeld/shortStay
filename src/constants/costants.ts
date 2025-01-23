@@ -1,5 +1,7 @@
 export const API_URL = 'https://instaback.ai:4002/d47b5211-1ee0-4a00-a697-36aacd76bd22'
 
+export const GOOGLE_MAPS_API_KEY = "AIzaSyBcMTUwO7_UgaahI1NSYVVYbOw7ngJ44zQ";
+
 export const LOGIN = "/auth/login"
 export const REGISTER = "/auth/register"
 export const GET_CURRENT_USER = '/api/user/'

@@ -3,8 +3,7 @@ import { LoadScript } from "@react-google-maps/api";
 import { LoactionStepProps } from "./type";
 import { GoogleMapComponent } from "./GoogleMapComponent";
 import { LocationSearchInput } from "./LocationSearchInput";
-
-const GOOGLE_MAPS_API_KEY = "AIzaSyBcMTUwO7_UgaahI1NSYVVYbOw7ngJ44zQ";
+import { GOOGLE_MAPS_API_KEY } from "../../constants/costants";
 const libraries = ["places", "marker"] as ["places", "marker"];
 
 export const LocationStep: React.FC<LoactionStepProps> = ({ value, onChange }) => {
